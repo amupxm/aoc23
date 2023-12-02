@@ -51,9 +51,6 @@ func isPossible(str string) (power, id int, ok bool) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	power = mp["red"] * mp["green"] * mp["blue"]
-	// fmt.Println(mp["red"] <= 12 && mp["green"] <= 13 && mp["blue"] <= 14, idOfGame, mp)
-	fmt.Println(idOfGame, power)
 	//only 12 red cubes, 13 green cubes, and 14 blue cubes
-	return power, intIdOfGame, mp["red"] <= 12 && mp["green"] <= 13 && mp["blue"] <= 14
+	return (mp["red"] * mp["green"] * mp["blue"]), intIdOfGame, mp["red"] <= 12 && mp["green"] <= 13 && mp["blue"] <= 14
 }
